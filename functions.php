@@ -1,4 +1,10 @@
 <?php
+function mycustomtheme_theme_support(){
+    // Add dynamic title tag support
+    add_theme_support('title-tag');
+}
+
+add_action('after_setup_theme', 'mycustomtheme_theme_support');
 function mycustomtheme_register_styles(){
     wp_enqueue_style('mycustomtheme-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", array(), '1.0', 'all');
     wp_enqueue_style('mycustomtheme-style', get_template_directory_uri() . "/style.css", array(), '1.0', 'all');
