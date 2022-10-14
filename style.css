@@ -149,24 +149,25 @@ h6 {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(256,256,256, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-.header .nav-item {
-    font-weight: bold
+.header .menu-item {
+    font-weight: bold;
+    padding: 0.8rem;
 }
 
-.header .nav-item.active .nav-link {
+.header .menu-item.active a {
     color: rgba(0, 0, 0, 0.5)
 }
 
-.header .nav-item.active .nav-link:hover {
+.header .menu-item.active a:hover {
     text-decoration: none
 }
 
-.header .nav-item .nav-link {
+.header .menu-item a {    
     color: rgba(255, 255, 255, 0.8)
 }
 
-.header .nav-item .nav-link:hover {
-    text-decoration: underline;
+.header .menu-item a:hover {
+    text-decoration: none;
     color: rgba(0, 0, 0, 0.6)
 }
 .logo{
