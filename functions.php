@@ -5,6 +5,17 @@ function mycustomtheme_theme_support(){
 }
 
 add_action('after_setup_theme', 'mycustomtheme_theme_support');
+
+function mycustomtheme_menu(){
+    $locations = array(
+        'pimary' => "Desktop Primary Left Sidebar",
+        'footer' => "Footer Menu Items"
+    );
+
+    register_nav_menus($locations);
+}
+
+add_action('init', 'mycustomtheme_menu');
 function mycustomtheme_register_styles(){
     wp_enqueue_style('mycustomtheme-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", array(), '1.0', 'all');
     wp_enqueue_style('mycustomtheme-style', get_template_directory_uri() . "/style.css", array(), '1.0', 'all');
