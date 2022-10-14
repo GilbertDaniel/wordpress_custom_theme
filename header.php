@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Blog Site Template">
     <meta name="author" content="https://youtube.com/FollowAndrew">    
-    <link rel="shortcut icon" href="images/logo.png"> 
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri();?>/assets/images/logo.png"> 
     
     <!-- FontAwesome CSS-->
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> -->
@@ -22,7 +22,7 @@
 <body>
     
     <header class="header text-center">	    
-	    <a class="site-title pt-lg-4 mb-0" href="index.html">SiteName.dev</a>
+	    <a class="site-title pt-lg-4 mb-0" href="<?php echo get_bloginfo('url');?>"><?php echo get_bloginfo('name');?></a>
         
 	    <nav class="navbar navbar-expand-lg navbar-dark" >
            
@@ -31,7 +31,9 @@
 			</button>
 
 			<div id="navigation" class="collapse navbar-collapse flex-column" >
-				<img class="mb-3 mx-auto logo" src="images/logo.png" alt="logo" >			
+				<?php //echo get_custom_logo();?>
+				<?php //echo esc_url( wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' )[0] ); ?>
+				<img class="mb-3 mx-auto logo" src="<?php echo esc_url( wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' )[0] ); ?>"  alt="logo" >			
 				<?php
 				wp_nav_menu(
 					array(
