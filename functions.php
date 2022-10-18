@@ -35,4 +35,23 @@ function mycustomtheme_register_scripts(){
 }
 
 add_action('wp_enqueue_scripts', 'mycustomtheme_register_scripts');
+
+function mycustomtheme_widget_areas(){
+    register_sidebar(
+        array(
+            'before_title' => '',
+            'after_title' => '',
+            'before_title' => '',
+            'after_widget' => ''
+
+        ),
+        array(
+            'name' => 'Sidebar Area',
+            'id'=> 'sidebar-1',
+            'description' => 'Sidebar Widget Area'
+        )
+    );
+}
+
+add_action('widgets_init', 'mycustomtheme_widget_areas');
 ?>
