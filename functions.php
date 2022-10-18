@@ -41,8 +41,8 @@ function mycustomtheme_widget_areas(){
         array(
             'before_title' => '',
             'after_title' => '',
-            'before_title' => '',
-            'after_widget' => ''
+            'before_title' => '<ul class="social-list list-inline py-3 mx-auto">',
+            'after_widget' => '</ul>'
 
         ),
         array(
