@@ -11,6 +11,9 @@
 				}
 			}
 		?>
+        <?php
+            the_posts_pagination();
+        ?>
 	</article>
    <?php get_footer();?>
 
